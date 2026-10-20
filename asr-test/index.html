@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>维语长按识别测试</title>
+  <style>
+    :root { font-family: system-ui, "Microsoft YaHei", sans-serif; color: #18342f; background: #f4f7f5; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 32px 16px; }
+    main { max-width: 760px; margin: auto; }
+    h1 { font-size: 28px; margin: 0 0 8px; }
+    p { line-height: 1.65; }
+    .muted { color: #5d746c; }
+    .card { background: #fff; padding: 24px; margin: 18px 0; border-radius: 18px; box-shadow: 0 8px 25px #153d2812; }
+    button { background: #167f5b; color: #fff; border: 0; border-radius: 12px; padding: 16px 24px; font-size: 18px; cursor: pointer; }
+    button:disabled { opacity: .55; cursor: wait; }
+    #record-button { width: 100%; min-height: 76px; touch-action: none; user-select: none; -webkit-user-select: none; }
+    #record-button.recording { background: #b83932; transform: scale(.99); }
+    #record-button.busy { background: #56766b; cursor: wait; }
+    output, #error { display: block; white-space: pre-wrap; overflow-wrap: anywhere; }
+    output { min-height: 74px; font-size: 22px; line-height: 1.8; }
+    #error { color: #9a2d27; }
+    .pill { display: inline-block; border-radius: 20px; padding: 5px 12px; background: #e5f1eb; }
+    .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+    .recording-hint { margin: 14px 0 0; text-align: center; font-weight: 600; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>维语长按识别测试</h1>
+  <p class="muted">按住按钮说话，松开后自动在本机识别并显示拉丁维文。录音只发送到这台电脑上的识别服务，不调用神农、不翻译，也不连接云端。</p>
+  <div class="card">
+    <div class="row"><strong>模型状态</strong><span id="model-status" class="pill">检查中…</span></div>
+    <p id="setup-help" class="muted" hidden>首次使用请双击此测试页目录里的 <strong>install-model.cmd</strong> 安装模型。若下载失败，可从<a href="https://github.com/gheyret/uyghurasr_python/releases/tag/tunji" target="_blank" rel="noopener noreferrer">原项目下载页</a>手动下载 <code>uyghur_asr.onnx</code>，放入 <code>asr-test/model</code>，再刷新本页。</p>
+    <p class="muted">请允许浏览器使用麦克风。最长录音 45 秒；再次按住即可进行下一次识别。</p>
+    <button id="record-button" type="button" aria-pressed="false">按住说话</button>
+    <p id="recording-hint" class="recording-hint muted" aria-live="polite">按住按钮开始录音，松开后识别</p>
+    <p id="error" role="alert"></p>
+  </div>
+  <div class="card">
+    <div class="row"><strong>识别原文（拉丁维文）</strong><span id="timing" class="muted"></span></div>
+    <output id="result" aria-live="polite">识别结果会显示在这里。</output>
+  </div>
+  <p class="muted">这是本机模型的独立测试页。它只负责语音转文字；识别结果不会发送给神农。</p>
+</main>
+<script>
+  const recordButton = document.getElementById('record-button');
+  const hint = document.getElementById('recording-hint');
+  const result = document.getElementById('result');
+  const error = document.getElementById('error');
+  const timing = document.getElementById('timing');
+  const maxBytes = 8 * 1024 * 1024;
+  const maxDurationMs = 45_000;
+  let mediaRecorder;
+  let mediaStream;
+  let chunks = [];
+  let recording = false;
+  let wantsRecording = false;
+  let busy = false;
+  let startedAt = 0;
+  let durationTimer;
+  let activePointerId = null;
+
+  fetch('/api/status').then(r => r.json()).then(data => {
+    document.getElementById('model-status').textContent = data.ready ? '可以测试' : '模型或依赖尚未安装';
+    document.getElementById('setup-help').hidden = data.ready;
+  }).catch(() => { document.getElementById('model-status').textContent = '状态读取失败'; });
+
+  function chooseMimeType() {
+    if (!window.MediaRecorder) return '';
+    const candidates = ['audio/webm;codecs=opus', 'audio/ogg;codecs=opus', 'audio/mp4'];
+    return candidates.find(type => MediaRecorder.isTypeSupported(type)) || '';
+  }
+
+  async function startRecording() {
+    if (recording || wantsRecording || busy) return;
+    wantsRecording = true;
+    error.textContent = '';
+    timing.textContent = '';
+    result.textContent = '正在录音…';
+    if (!navigator.mediaDevices?.getUserMedia) {
+      error.textContent = '此浏览器无法访问麦克风。请用最新版 Edge 或 Chrome 打开 http://127.0.0.1:8766/。';
+      result.textContent = '识别结果会显示在这里。';
+      return;
+    }
+    if (!window.MediaRecorder) {
+      error.textContent = '当前浏览器不支持录音，请更新 Edge 或 Chrome 后重试。';
+      result.textContent = '识别结果会显示在这里。';
+      return;
+    }
+    try {
+      mediaStream = await navigator.mediaDevices.getUserMedia({
+        audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true }
+      });
+      if (!wantsRecording) {
+        stopTracks();
+        return;
+      }
+      const mimeType = chooseMimeType();
+      mediaRecorder = mimeType ? new MediaRecorder(mediaStream, { mimeType }) : new MediaRecorder(mediaStream);
+      chunks = [];
+      mediaRecorder.addEventListener('dataavailable', event => {
+        if (event.data?.size) chunks.push(event.data);
+      });
+      mediaRecorder.addEventListener('error', event => {
+        error.textContent = event.error?.message || '浏览器录音失败，请检查麦克风后重试。';
+      });
+      mediaRecorder.addEventListener('stop', handleRecordingStopped, { once: true });
+      mediaRecorder.start();
+      recording = true;
+      startedAt = performance.now();
+      recordButton.classList.add('recording');
+      recordButton.setAttribute('aria-pressed', 'true');
+      recordButton.textContent = '正在录音，松开结束';
+      hint.textContent = '正在录音…';
+      durationTimer = window.setTimeout(() => stopRecording('已达到 45 秒上限，正在识别'), maxDurationMs);
+    } catch (exc) {
+      wantsRecording = false;
+      stopTracks();
+      result.textContent = '识别结果会显示在这里。';
+      if (exc.name === 'NotAllowedError' || exc.name === 'PermissionDeniedError') {
+        error.textContent = '麦克风权限被拒绝。请在浏览器地址栏左侧打开网站权限，允许使用麦克风后再试。';
+      } else if (exc.name === 'NotFoundError') {
+        error.textContent = '没有找到可用的麦克风。请连接或启用麦克风后重试。';
+      } else {
+        error.textContent = `无法开始录音：${exc.message || String(exc)}`;
+      }
+    }
+  }
+
+  function stopRecording(message = '松开完成，正在本机识别…') {
+    if (!recording && !wantsRecording) return;
+    wantsRecording = false;
+    if (!recording) {
+      stopTracks();
+      result.textContent = '识别结果会显示在这里。';
+      hint.textContent = '按住按钮开始录音，松开后识别';
+      return;
+    }
+    recording = false;
+    window.clearTimeout(durationTimer);
+    recordButton.classList.remove('recording');
+    recordButton.setAttribute('aria-pressed', 'false');
+    recordButton.textContent = '按住说话';
+    hint.textContent = message;
+    if (mediaRecorder?.state === 'recording') mediaRecorder.stop();
+    else stopTracks();
+  }
+
+  function stopTracks() {
+    mediaStream?.getTracks().forEach(track => track.stop());
+    mediaStream = null;
+  }
+
+  function blobToBase64(blob) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onerror = () => reject(new Error('读取录音失败，请重试。'));
+      reader.onload = () => resolve(String(reader.result).split(',', 2)[1] || '');
+      reader.readAsDataURL(blob);
+    });
+  }
+
+  async function handleRecordingStopped() {
+    const elapsed = ((performance.now() - startedAt) / 1000).toFixed(1);
+    const blob = new Blob(chunks, { type: mediaRecorder?.mimeType || 'application/octet-stream' });
+    stopTracks();
+    chunks = [];
+    if (!blob.size) {
+      result.textContent = '本次没有录到声音。';
+      hint.textContent = '按住按钮开始录音，松开后识别';
+      return;
+    }
+    if (blob.size > maxBytes) {
+      result.textContent = '本次没有识别结果。';
+      error.textContent = '录音文件超过 8 MB，请缩短录音后重试。';
+      hint.textContent = '按住按钮开始录音，松开后识别';
+      return;
+    }
+    busy = true;
+    recordButton.disabled = true;
+    recordButton.classList.add('busy');
+    result.textContent = '正在本机识别，请稍候…';
+    timing.textContent = '';
+    error.textContent = '';
+    const requestStarted = performance.now();
+    try {
+      const audioBase64 = await blobToBase64(blob);
+      const response = await fetch('/api/recognize', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ audio_base64: audioBase64 })
+      });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || '识别失败');
+      result.textContent = data.transcription || '模型没有返回文字，请再说一次。';
+      timing.textContent = `录音 ${elapsed} 秒 · 模型推理 ${data.inference_seconds} 秒`;
+      hint.textContent = '识别完成。按住按钮可再次提问。';
+    } catch (exc) {
+      result.textContent = '本次没有识别结果。';
+      error.textContent = exc.message || String(exc);
+      hint.textContent = '识别失败。检查模型状态和本机服务后重试。';
+    } finally {
+      busy = false;
+      recordButton.disabled = false;
+      recordButton.classList.remove('busy');
+      if (performance.now() - requestStarted > 0) recordButton.focus({ preventScroll: true });
+    }
+  }
+
+  recordButton.addEventListener('pointerdown', event => {
+    if (event.pointerType === 'mouse' && event.button !== 0) return;
+    event.preventDefault();
+    activePointerId = event.pointerId;
+    recordButton.setPointerCapture?.(event.pointerId);
+    startRecording();
+  });
+  recordButton.addEventListener('pointerup', event => {
+    if (activePointerId !== event.pointerId) return;
+    activePointerId = null;
+    stopRecording();
+  });
+  recordButton.addEventListener('pointercancel', () => { activePointerId = null; stopRecording(); });
+  recordButton.addEventListener('lostpointercapture', () => { activePointerId = null; stopRecording(); });
+  window.addEventListener('blur', () => stopRecording());
+  document.addEventListener('visibilitychange', () => { if (document.hidden) stopRecording(); });
+
+  recordButton.addEventListener('keydown', event => {
+    if ((event.code === 'Space' || event.code === 'Enter') && !event.repeat) {
+      event.preventDefault();
+      startRecording();
+    }
+  });
+  recordButton.addEventListener('keyup', event => {
+    if (event.code === 'Space' || event.code === 'Enter') {
+      event.preventDefault();
+      stopRecording();
+    }
+  });
+</script>
+</body>
+</html>

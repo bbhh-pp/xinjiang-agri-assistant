@@ -1,0 +1,405 @@
+{
+  "GlossaryId": "在腾讯控制台创建术语库后填写真实ID",
+  "Entries": [
+    {
+      "SourceTerm": "草料",
+      "TargetTerm": "تام-يېمىش"
+    },
+    {
+      "SourceTerm": "牧草",
+      "TargetTerm": "ئوتلاق ئوتى"
+    },
+    {
+      "SourceTerm": "干草",
+      "TargetTerm": "قۇرۇق ئوت"
+    },
+    {
+      "SourceTerm": "青贮饲料",
+      "TargetTerm": "سىلوس قۇناق"
+    },
+    {
+      "SourceTerm": "苜蓿草",
+      "TargetTerm": "بېدە"
+    },
+    {
+      "SourceTerm": "玉米秸秆",
+      "TargetTerm": "قوناق سامان"
+    },
+    {
+      "SourceTerm": "麦秸",
+      "TargetTerm": "بۇغداي سامان"
+    },
+    {
+      "SourceTerm": "稻草",
+      "TargetTerm": "شال سامان"
+    },
+    {
+      "SourceTerm": "精饲料",
+      "TargetTerm": "قويۇق يەم"
+    },
+    {
+      "SourceTerm": "粗饲料",
+      "TargetTerm": "يىرىك يەم"
+    },
+    {
+      "SourceTerm": "浓缩料",
+      "TargetTerm": "كونسېنترات يەم"
+    },
+    {
+      "SourceTerm": "蛋白质",
+      "TargetTerm": "ئاقسىل"
+    },
+    {
+      "SourceTerm": "能量",
+      "TargetTerm": "ئېنېرگىيە"
+    },
+    {
+      "SourceTerm": "矿物质",
+      "TargetTerm": "مىنېرال ماددا"
+    },
+    {
+      "SourceTerm": "维生素",
+      "TargetTerm": "ۋىتامىن"
+    },
+    {
+      "SourceTerm": "食盐",
+      "TargetTerm": "ئاش تۇزى"
+    },
+    {
+      "SourceTerm": "舔砖",
+      "TargetTerm": "تۇز يالاش تېشى"
+    },
+    {
+      "SourceTerm": "饮水",
+      "TargetTerm": "ئىچىملىك سۇ"
+    },
+    {
+      "SourceTerm": "饲槽",
+      "TargetTerm": "يەم ئوقۇرى"
+    },
+    {
+      "SourceTerm": "饮水槽",
+      "TargetTerm": "سۇ ئوقۇرى"
+    },
+    {
+      "SourceTerm": "采食量",
+      "TargetTerm": "يەم يېيىش مىقدارى"
+    },
+    {
+      "SourceTerm": "反刍",
+      "TargetTerm": "كۆشەش"
+    },
+    {
+      "SourceTerm": "咀嚼",
+      "TargetTerm": "چايناش"
+    },
+    {
+      "SourceTerm": "消化",
+      "TargetTerm": "ھەزىم قىلىش"
+    },
+    {
+      "SourceTerm": "饲喂",
+      "TargetTerm": "يەم بېرىش"
+    },
+    {
+      "SourceTerm": "换料",
+      "TargetTerm": "يەم ئالماشتۇرۇش"
+    },
+    {
+      "SourceTerm": "断水",
+      "TargetTerm": "سۇنى توختىتىش"
+    },
+    {
+      "SourceTerm": "霉变饲料",
+      "TargetTerm": "كۆكۈرگەن يەم"
+    },
+    {
+      "SourceTerm": "饲料中毒",
+      "TargetTerm": "يەمدىن زەھەرلىنىش"
+    },
+    {
+      "SourceTerm": "兽医",
+      "TargetTerm": "مال دوختۇرى"
+    },
+    {
+      "SourceTerm": "兽药",
+      "TargetTerm": "مال دوختۇرلۇق دورىسى"
+    },
+    {
+      "SourceTerm": "疫苗",
+      "TargetTerm": "ۋاكسىنا"
+    },
+    {
+      "SourceTerm": "免疫",
+      "TargetTerm": "ئىممۇنىتېت"
+    },
+    {
+      "SourceTerm": "驱虫",
+      "TargetTerm": "قۇرت چۈشۈرۈش"
+    },
+    {
+      "SourceTerm": "寄生虫",
+      "TargetTerm": "پارازىت قۇرت"
+    },
+    {
+      "SourceTerm": "体内寄生虫",
+      "TargetTerm": "ئىچكى پارازىت قۇرت"
+    },
+    {
+      "SourceTerm": "体外寄生虫",
+      "TargetTerm": "تاشقى پارازىت قۇرت"
+    },
+    {
+      "SourceTerm": "发烧",
+      "TargetTerm": "قىزىش"
+    },
+    {
+      "SourceTerm": "体温",
+      "TargetTerm": "بەدەن تېمپېراتۇرىسى"
+    },
+    {
+      "SourceTerm": "咳嗽",
+      "TargetTerm": "يۆتىلىشى"
+    },
+    {
+      "SourceTerm": "流鼻涕",
+      "TargetTerm": "ماڭقا ئېقىشى"
+    },
+    {
+      "SourceTerm": "腹泻",
+      "TargetTerm": "ئىچ سۈرۈشى"
+    },
+    {
+      "SourceTerm": "便秘",
+      "TargetTerm": "قەۋزىيەت"
+    },
+    {
+      "SourceTerm": "腹胀",
+      "TargetTerm": "قورساق كۆپۈش"
+    },
+    {
+      "SourceTerm": "瘤胃胀气",
+      "TargetTerm": "قۇرساق كۆپۈشى"
+    },
+    {
+      "SourceTerm": "食欲",
+      "TargetTerm": "ئىشتىھا"
+    },
+    {
+      "SourceTerm": "不吃草",
+      "TargetTerm": "ئوت يېمەسلىك"
+    },
+    {
+      "SourceTerm": "精神沉郁",
+      "TargetTerm": "روھسىزلىنىش"
+    },
+    {
+      "SourceTerm": "消瘦",
+      "TargetTerm": "ئورۇقلاش"
+    },
+    {
+      "SourceTerm": "脱水",
+      "TargetTerm": "سۇسىزلىنىش"
+    },
+    {
+      "SourceTerm": "贫血",
+      "TargetTerm": "قان ئازلىق"
+    },
+    {
+      "SourceTerm": "口腔溃疡",
+      "TargetTerm": "ئېغىز يارىسى"
+    },
+    {
+      "SourceTerm": "流口水",
+      "TargetTerm": "شۆلگەي ئېقىشى"
+    },
+    {
+      "SourceTerm": "跛行",
+      "TargetTerm": "ئاقساپ مېڭىشى"
+    },
+    {
+      "SourceTerm": "关节肿胀",
+      "TargetTerm": "بوغۇم ئىششىشى"
+    },
+    {
+      "SourceTerm": "乳房炎",
+      "TargetTerm": "مەزى ياللۇغى"
+    },
+    {
+      "SourceTerm": "乳房肿胀",
+      "TargetTerm": "يېلىن ئىشىشى"
+    },
+    {
+      "SourceTerm": "乳汁",
+      "TargetTerm": "سۈت"
+    },
+    {
+      "SourceTerm": "奶量下降",
+      "TargetTerm": "سۈت مىقدارىنىڭ تۆۋەنلىشى"
+    },
+    {
+      "SourceTerm": "难产",
+      "TargetTerm": "تۇغۇت قىيىنلىشىشى"
+    },
+    {
+      "SourceTerm": "流产",
+      "TargetTerm": "بالا چۈشۈرۈشى"
+    },
+    {
+      "SourceTerm": "传染病",
+      "TargetTerm": "يۇقۇملۇق كېسەللىك"
+    },
+    {
+      "SourceTerm": "隔离",
+      "TargetTerm": "ئايرىماق"
+    },
+    {
+      "SourceTerm": "消毒",
+      "TargetTerm": "دېزىنفېكسىيە قىلىش"
+    },
+    {
+      "SourceTerm": "抗生素",
+      "TargetTerm": "ئانتىبىيوتىك"
+    },
+    {
+      "SourceTerm": "口蹄疫",
+      "TargetTerm": "ئېغىز-تۇياق كېسىلى"
+    },
+    {
+      "SourceTerm": "布鲁氏菌病",
+      "TargetTerm": "بروتسېللىيوز"
+    },
+    {
+      "SourceTerm": "羊痘",
+      "TargetTerm": "قوي چېچىكى"
+    },
+    {
+      "SourceTerm": "小反刍兽疫",
+      "TargetTerm": "كىچىك چارۋا يۇقۇمى"
+    },
+    {
+      "SourceTerm": "肺炎",
+      "TargetTerm": "ئۆپكە ياللۇغى"
+    },
+    {
+      "SourceTerm": "胃肠炎",
+      "TargetTerm": "ئاشقازان-ئۈچەي ياللۇغى"
+    },
+    {
+      "SourceTerm": "皮肤病",
+      "TargetTerm": "تېرە كېسىلى"
+    },
+    {
+      "SourceTerm": "结膜炎",
+      "TargetTerm": "كۆز پەردىسى ياللۇغى"
+    },
+    {
+      "SourceTerm": "粪便",
+      "TargetTerm": "پۇقى"
+    },
+    {
+      "SourceTerm": "粪便检查",
+      "TargetTerm": "تەرەت تەكشۈرۈشى"
+    },
+    {
+      "SourceTerm": "出血",
+      "TargetTerm": "قاناش"
+    },
+    {
+      "SourceTerm": "伤口",
+      "TargetTerm": "يارا"
+    },
+    {
+      "SourceTerm": "肿胀",
+      "TargetTerm": "ئىشىشى"
+    },
+    {
+      "SourceTerm": "呼吸急促",
+      "TargetTerm": "نەپەس تېزلىشىشى"
+    },
+    {
+      "SourceTerm": "急症",
+      "TargetTerm": "جىددىي كېسەللىك"
+    },
+    {
+      "SourceTerm": "停药期",
+      "TargetTerm": "دورىنى توختىتىش مۇددىتى"
+    },
+    {
+      "SourceTerm": "鸡蛋",
+      "TargetTerm": "توخۇ تۇخۇمى"
+    },
+    {
+      "SourceTerm": "蛋壳",
+      "TargetTerm": "تۇخۇم قېپى"
+    },
+    {
+      "SourceTerm": "肉鸡",
+      "TargetTerm": "گۆش توخۇسى"
+    },
+    {
+      "SourceTerm": "蛋鸡",
+      "TargetTerm": "تۇخۇم توخۇسى"
+    },
+    {
+      "SourceTerm": "雏鸡",
+      "TargetTerm": "چۈجە"
+    },
+    {
+      "SourceTerm": "鸡舍",
+      "TargetTerm": "توخۇخانا"
+    },
+    {
+      "SourceTerm": "羽毛",
+      "TargetTerm": "پەي"
+    },
+    {
+      "SourceTerm": "羊毛",
+      "TargetTerm": "قوي يۇڭى"
+    },
+    {
+      "SourceTerm": "羊肉",
+      "TargetTerm": "قوي گۆشى"
+    },
+    {
+      "SourceTerm": "牛肉",
+      "TargetTerm": "كالا گۆشى"
+    },
+    {
+      "SourceTerm": "羊奶",
+      "TargetTerm": "قوي سۈتى"
+    },
+    {
+      "SourceTerm": "牛奶",
+      "TargetTerm": "كالا سۈتى"
+    },
+    {
+      "SourceTerm": "皮毛",
+      "TargetTerm": "تېرە-يۇڭ"
+    },
+    {
+      "SourceTerm": "农户",
+      "TargetTerm": "دېھقان ئائىلىسى"
+    },
+    {
+      "SourceTerm": "养殖户",
+      "TargetTerm": "چارۋىچى ئائىلىسى"
+    },
+    {
+      "SourceTerm": "合作社",
+      "TargetTerm": "ھەمكارلىق كوپىراتىپى"
+    },
+    {
+      "SourceTerm": "收购",
+      "TargetTerm": "سېتىۋېلىش"
+    },
+    {
+      "SourceTerm": "销售",
+      "TargetTerm": "سېتىش"
+    },
+    {
+      "SourceTerm": "市场价格",
+      "TargetTerm": "بازار باھاسى"
+    }
+  ]
+}

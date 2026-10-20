@@ -1,0 +1,405 @@
+{
+  "GlossaryId": "在腾讯控制台创建术语库后填写真实ID",
+  "Entries": [
+    {
+      "SourceTerm": "دىھقانچىلىق",
+      "TargetTerm": "农业"
+    },
+    {
+      "SourceTerm": "دىھقان",
+      "TargetTerm": "农民"
+    },
+    {
+      "SourceTerm": "ئېتىز",
+      "TargetTerm": "农田"
+    },
+    {
+      "SourceTerm": "يېر ھايداش",
+      "TargetTerm": "耕地"
+    },
+    {
+      "SourceTerm": "تېرىش",
+      "TargetTerm": "播种"
+    },
+    {
+      "SourceTerm": "ئۇرۇق",
+      "TargetTerm": "种子"
+    },
+    {
+      "SourceTerm": "كۆچەت",
+      "TargetTerm": "种苗"
+    },
+    {
+      "SourceTerm": "ئۈنۈپ چىقىش",
+      "TargetTerm": "出苗"
+    },
+    {
+      "SourceTerm": "كۆچۈرۈش",
+      "TargetTerm": "移栽"
+    },
+    {
+      "SourceTerm": "ئۆسۈش",
+      "TargetTerm": "生长"
+    },
+    {
+      "SourceTerm": "گۈللەش",
+      "TargetTerm": "开花"
+    },
+    {
+      "SourceTerm": "تۇپراقلاشتۇرۇش",
+      "TargetTerm": "授粉"
+    },
+    {
+      "SourceTerm": "مېۋە بېرىش",
+      "TargetTerm": "结果"
+    },
+    {
+      "SourceTerm": "پىشىش",
+      "TargetTerm": "成熟"
+    },
+    {
+      "SourceTerm": "ھوسۇل ئېلىش",
+      "TargetTerm": "收获"
+    },
+    {
+      "SourceTerm": "ھوسۇل",
+      "TargetTerm": "产量"
+    },
+    {
+      "SourceTerm": "سۈپەت",
+      "TargetTerm": "品质"
+    },
+    {
+      "SourceTerm": "سورت",
+      "TargetTerm": "品种"
+    },
+    {
+      "SourceTerm": "ئەتىيە تېخنىكىسى",
+      "TargetTerm": "农艺"
+    },
+    {
+      "SourceTerm": "تېخنىك خادىم",
+      "TargetTerm": "农技员"
+    },
+    {
+      "SourceTerm": "كۈن سايىسى",
+      "TargetTerm": "温室"
+    },
+    {
+      "SourceTerm": "پارنىك",
+      "TargetTerm": "大棚"
+    },
+    {
+      "SourceTerm": "پلاستىك پەردە",
+      "TargetTerm": "地膜"
+    },
+    {
+      "SourceTerm": "پەردە يېپىش",
+      "TargetTerm": "覆膜"
+    },
+    {
+      "SourceTerm": "ئالماش تېرىش",
+      "TargetTerm": "轮作"
+    },
+    {
+      "SourceTerm": "ئارىلاپ تېرىش",
+      "TargetTerm": "间作"
+    },
+    {
+      "SourceTerm": "سىڭدۈرۈپ تېرىش",
+      "TargetTerm": "套种"
+    },
+    {
+      "SourceTerm": "يىقىلىش",
+      "TargetTerm": "倒伏"
+    },
+    {
+      "SourceTerm": "ئوت-چۆپ",
+      "TargetTerm": "杂草"
+    },
+    {
+      "SourceTerm": "ئوت-چۆپنى يوقىتىش",
+      "TargetTerm": "除草"
+    },
+    {
+      "SourceTerm": "تۇپراق",
+      "TargetTerm": "土壤"
+    },
+    {
+      "SourceTerm": "تۇپراك قېزىش قەۋىتى",
+      "TargetTerm": "耕层"
+    },
+    {
+      "SourceTerm": "قۇم تۇپراق",
+      "TargetTerm": "沙土"
+    },
+    {
+      "SourceTerm": "لاتا تۇپراق",
+      "TargetTerm": "黏土"
+    },
+    {
+      "SourceTerm": "شور تۇپراق",
+      "TargetTerm": "盐碱地"
+    },
+    {
+      "SourceTerm": "تۇپراق تۇزلىشىش",
+      "TargetTerm": "土壤盐渍化"
+    },
+    {
+      "SourceTerm": "تۇپراق قاتتىقلىشىش",
+      "TargetTerm": "土壤板结"
+    },
+    {
+      "SourceTerm": "تۇپراق ھوسۇلدارلىقى",
+      "TargetTerm": "土壤肥力"
+    },
+    {
+      "SourceTerm": "تۇپراق نەملىكى",
+      "TargetTerm": "土壤墒情"
+    },
+    {
+      "SourceTerm": "ئورگانىك ماددا",
+      "TargetTerm": "有机质"
+    },
+    {
+      "SourceTerm": "سۇغىرىش",
+      "TargetTerm": "灌溉"
+    },
+    {
+      "SourceTerm": "سۇ قويۇش",
+      "TargetTerm": "浇水"
+    },
+    {
+      "SourceTerm": "تامچىلاتما سۇغۇرۇش",
+      "TargetTerm": "滴灌"
+    },
+    {
+      "SourceTerm": "سېلىپ سۇغۇرۇش",
+      "TargetTerm": "漫灌"
+    },
+    {
+      "SourceTerm": "سۇغىرىش مىقدارى",
+      "TargetTerm": "灌水量"
+    },
+    {
+      "SourceTerm": "سۇغۇرۇش ۋاقتى",
+      "TargetTerm": "灌水时间"
+    },
+    {
+      "SourceTerm": "سۇ ئۆستەڭى",
+      "TargetTerm": "水渠"
+    },
+    {
+      "SourceTerm": "ئېرىق",
+      "TargetTerm": "沟渠"
+    },
+    {
+      "SourceTerm": "قۇدۇق سۈيى",
+      "TargetTerm": "井水"
+    },
+    {
+      "SourceTerm": "يەر ئاستى سۇيى",
+      "TargetTerm": "地下水"
+    },
+    {
+      "SourceTerm": "سۇنى چىقىرىۋېتىش",
+      "TargetTerm": "排水"
+    },
+    {
+      "SourceTerm": "سۇ يىغىلىپ قېلىش",
+      "TargetTerm": "积水"
+    },
+    {
+      "SourceTerm": "قۇرغاقچىلىق",
+      "TargetTerm": "干旱"
+    },
+    {
+      "SourceTerm": "يۇقىرى تېمپېراتۇرا",
+      "TargetTerm": "高温"
+    },
+    {
+      "SourceTerm": "تۆۋەن تېمپېراتۇرا",
+      "TargetTerm": "低温"
+    },
+    {
+      "SourceTerm": "قىراپ كېتىش",
+      "TargetTerm": "霜冻"
+    },
+    {
+      "SourceTerm": "يامغۇر يېغىش",
+      "TargetTerm": "降雨"
+    },
+    {
+      "SourceTerm": "كۈچلۈك شامال",
+      "TargetTerm": "大风"
+    },
+    {
+      "SourceTerm": "مۆلدۈر",
+      "TargetTerm": "冰雹"
+    },
+    {
+      "SourceTerm": "قار يىغىلىش",
+      "TargetTerm": "积雪"
+    },
+    {
+      "SourceTerm": "پارلىنىش",
+      "TargetTerm": "蒸发"
+    },
+    {
+      "SourceTerm": "بۇغداي",
+      "TargetTerm": "小麦"
+    },
+    {
+      "SourceTerm": "قىشلىق بۇغداي",
+      "TargetTerm": "冬小麦"
+    },
+    {
+      "SourceTerm": "باھارلىق بۇغداي",
+      "TargetTerm": "春小麦"
+    },
+    {
+      "SourceTerm": "قۇناق",
+      "TargetTerm": "玉米"
+    },
+    {
+      "SourceTerm": "قۇناق شېخى",
+      "TargetTerm": "玉米棒"
+    },
+    {
+      "SourceTerm": "قۇناق دانىسى",
+      "TargetTerm": "玉米粒"
+    },
+    {
+      "SourceTerm": "قۇناق سامىنى",
+      "TargetTerm": "玉米秸秆"
+    },
+    {
+      "SourceTerm": "شالى",
+      "TargetTerm": "水稻"
+    },
+    {
+      "SourceTerm": "گۈرۈچ",
+      "TargetTerm": "大米"
+    },
+    {
+      "SourceTerm": "ئارپا",
+      "TargetTerm": "大麦"
+    },
+    {
+      "SourceTerm": "سۇلۇ",
+      "TargetTerm": "燕麦"
+    },
+    {
+      "SourceTerm": "قۇناق",
+      "TargetTerm": "高粱"
+    },
+    {
+      "SourceTerm": "تارىق",
+      "TargetTerm": "谷子"
+    },
+    {
+      "SourceTerm": "پۇرچاق",
+      "TargetTerm": "豆类"
+    },
+    {
+      "SourceTerm": "دادۇر",
+      "TargetTerm": "大豆"
+    },
+    {
+      "SourceTerm": "باقلا",
+      "TargetTerm": "豌豆"
+    },
+    {
+      "SourceTerm": "پاختا",
+      "TargetTerm": "棉花"
+    },
+    {
+      "SourceTerm": "غوزا",
+      "TargetTerm": "棉铃"
+    },
+    {
+      "SourceTerm": "غوزا",
+      "TargetTerm": "棉桃"
+    },
+    {
+      "SourceTerm": "رەپە",
+      "TargetTerm": "油菜"
+    },
+    {
+      "SourceTerm": "زىغىر",
+      "TargetTerm": "胡麻"
+    },
+    {
+      "SourceTerm": "كۈنجۈت",
+      "TargetTerm": "芝麻"
+    },
+    {
+      "SourceTerm": "ئاپتاپپەرەس",
+      "TargetTerm": "向日葵"
+    },
+    {
+      "SourceTerm": "قىزىلچا",
+      "TargetTerm": "甜菜"
+    },
+    {
+      "SourceTerm": "چۈچۈكبۇيا",
+      "TargetTerm": "甘草"
+    },
+    {
+      "SourceTerm": "تاماكا",
+      "TargetTerm": "烟草"
+    },
+    {
+      "SourceTerm": "لازا",
+      "TargetTerm": "辣椒"
+    },
+    {
+      "SourceTerm": "پەمىدۇر",
+      "TargetTerm": "番茄"
+    },
+    {
+      "SourceTerm": "ياڭيو",
+      "TargetTerm": "马铃薯"
+    },
+    {
+      "SourceTerm": "بېدە",
+      "TargetTerm": "苜蓿"
+    },
+    {
+      "SourceTerm": "تەرخەمەك",
+      "TargetTerm": "黄瓜"
+    },
+    {
+      "SourceTerm": "پىدىگەن",
+      "TargetTerm": "茄子"
+    },
+    {
+      "SourceTerm": "پىياز",
+      "TargetTerm": "洋葱"
+    },
+    {
+      "SourceTerm": "سامساق",
+      "TargetTerm": "大蒜"
+    },
+    {
+      "SourceTerm": "سەۋزە",
+      "TargetTerm": "胡萝卜"
+    },
+    {
+      "SourceTerm": "تۇرۇپ",
+      "TargetTerm": "萝卜"
+    },
+    {
+      "SourceTerm": "بەسەي",
+      "TargetTerm": "白菜"
+    },
+    {
+      "SourceTerm": "كاپۇسكا",
+      "TargetTerm": "卷心菜"
+    },
+    {
+      "SourceTerm": "گۈل كەلەم",
+      "TargetTerm": "花椰菜"
+    }
+  ]
+}

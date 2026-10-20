@@ -1,0 +1,13 @@
+{
+  "GlossaryId": "在腾讯控制台创建术语库后填写真实ID",
+  "Entries": [
+    {
+      "SourceTerm": "چىقىم",
+      "TargetTerm": "成本"
+    },
+    {
+      "SourceTerm": "كىرىم",
+      "TargetTerm": "收入"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env.oracle
+    environment:
+      PORT: "8000"
+      SHENNONG_CONVERSATIONS_DB: /var/lib/shennong/conversations.sqlite3
+      UYGHUR_ASR_MODEL_PATH: /opt/shennong/models/uyghur_asr.onnx
+      # One shared demo account means this persisted per-account cap is global
+      # across all teachers using the same login.
+      SHENNONG_REQUESTS_PER_MINUTE: "3"
+      SHENNONG_DAILY_REQUESTS: "20"
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - shennong_data:/var/lib/shennong
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 60s
+
+volumes:
+  shennong_data:

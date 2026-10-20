@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#152c26">
+  <title>神农农牧助手</title>
+  <link rel="stylesheet" href="/static/grassland.css?v=local-history-2026-10-20-1">
+  <script src="/static/ui_locale.js?v=local-history-2026-10-20-1" defer></script>
+  <script src="/static/app.js?v=local-history-2026-10-20-1" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <nav class="history-nav" aria-label="对话管理">
+      <button id="history-toggle" type="button" aria-expanded="false" aria-controls="history-drawer">历史对话</button>
+      <button id="new-conversation" type="button">＋ 新建对话</button>
+    </nav>
+    <aside id="history-drawer" class="history-drawer" aria-label="历史对话" hidden>
+      <div class="history-drawer-head"><strong>历史对话</strong><button id="history-close" type="button" aria-label="关闭历史对话">×</button></div>
+      <div id="history-list" class="history-list"></div>
+    </aside>
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <h1 id="page-title">农牧问题，有答案</h1>
+      </section>
+
+      <section id="conversation-turns" class="conversation-turns" aria-label="当前对话内容" hidden></section>
+
+      <section hidden class="modes" aria-label="选择提问方式">
+        <button id="text-mode" type="button" class="mode-card active" aria-pressed="true">
+          <span class="mode-icon" aria-hidden="true">文</span>
+          <span class="mode-title">文字提问</span>
+          <span class="mode-subtitle">中文输入 · 现已可用</span>
+        </button>
+        <button id="chinese-audio-mode" type="button" class="mode-card" aria-pressed="false">
+          <span class="mode-icon" aria-hidden="true">中</span>
+          <span class="mode-title">中文语音</span>
+          <span class="mode-subtitle">按住说中文 · 识别后可编辑</span>
+        </button>
+        <button id="uyghur-text-mode" type="button" class="mode-card" aria-pressed="false">
+          <span class="mode-icon" aria-hidden="true">ئۇ</span>
+          <span class="mode-title">维语文字</span>
+          <span class="mode-subtitle">阿拉伯维文输入 · 双语回答</span>
+        </button>
+        <button id="audio-mode" type="button" class="mode-card" aria-pressed="false">
+          <span class="mode-icon" aria-hidden="true">声</span>
+          <span class="mode-title">维语语音</span>
+          <span class="mode-subtitle">按住维语提问 · 双语回答</span>
+        </button>
+        <button id="image-mode" type="button" class="mode-card" aria-pressed="false">
+          <span class="mode-icon" aria-hidden="true">图</span>
+          <span class="mode-title">图片识别</span>
+          <span class="mode-subtitle">上传照片 · 现已可用</span>
+        </button>
+      </section>
+
+      <div class="composer-shell">
+      <div class="work-area">
+        <div class="work-main">
+      <section id="chinese-audio-panel" class="question-card" aria-labelledby="chinese-audio-title" hidden>
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">中文语音识别</p>
+            <h2 id="chinese-audio-title">按住说出你的问题</h2>
+          </div>
+          <span class="step-pill">识别后可检查、修改</span>
+        </div>
+        <p class="field-label">按住按钮说普通话，松开后识别。识别出的文字会填入中文提问框，你确认后再提交给神农。</p>
+        <div class="voice-controls">
+          <button id="chinese-record-button" class="record-button" type="button" aria-pressed="false">按住说话</button>
+          <button id="chinese-stop-button" class="stop-voice-button" type="button" hidden>停止识别</button>
+        </div>
+        <p id="chinese-recording-hint" class="recording-hint" aria-live="polite">使用浏览器语音识别，通常需要联网；音频可能由浏览器语音服务处理。</p>
+        <div id="chinese-live-transcript" class="speech-preview" lang="zh-CN" aria-live="polite">识别文字将在这里显示</div>
+      </section>
+
+      <section id="audio-panel" class="question-card" aria-labelledby="audio-title" hidden>
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">维语语音识别</p>
+            <h2 id="audio-title">按住说出你的问题</h2>
+          </div>
+          <span class="step-pill">本机开源模型</span>
+        </div>
+        <p class="field-label">按住按钮说维语，松开后本机识别，再交给神农回答。页面显示维语识别稿和中维双语答复。</p>
+        <div class="voice-controls">
+          <button id="record-button" class="record-button" type="button" aria-pressed="false">按住说话</button>
+          <button id="stop-voice-button" class="stop-voice-button" type="button" hidden>停止识别与回答</button>
+        </div>
+        <p id="recording-hint" class="recording-hint" aria-live="polite">首次使用时，请允许浏览器访问麦克风。最长录音 45 秒。</p>
+      </section>
+
+      <section id="uyghur-text-panel" class="question-card" aria-labelledby="uyghur-text-title" hidden>
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">维语文字提问</p>
+            <h2 id="uyghur-text-title">用维吾尔语文字提出问题</h2>
+          </div>
+          <span class="step-pill">理解问题 + 神农双语回答</span>
+        </div>
+        <form id="uyghur-text-form">
+          <label for="uyghur-text-question" class="field-label">维语问题（阿拉伯字母）</label>
+          <textarea id="uyghur-text-question" name="question" lang="ug" dir="rtl" rows="5" maxlength="2000" required placeholder="مەسىلەن: قويۇم ئوت يېمەيۋاتىدۇ، نېمە قىلىشىم كېرەك؟"></textarea>
+          <p class="field-help">提交后先由腾讯翻译显示中文问题，再由神农生成中文建议，最后腾讯回译为阿拉伯维文。</p>
+          <div class="form-footer">
+            <span id="uyghur-text-count" class="character-count">0 / 2000 字</span>
+            <button id="uyghur-text-submit" type="submit">获取双语回答 <span aria-hidden="true">↗</span></button>
+          </div>
+        </form>
+      </section>
+
+
+
+      <section id="text-panel" class="question-card" aria-labelledby="question-title">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">第一步 · 文字提问</p>
+            <h2 id="question-title">用中文描述你的问题</h2>
+          </div>
+          <span class="step-pill">已连接神农回答流程</span>
+        </div>
+        <form id="question-form">
+          <label for="question" class="field-label">问题内容</label>
+          <textarea id="question" name="question" rows="2" maxlength="2000" required placeholder="描述你遇到的农牧问题…"></textarea>
+          <div class="form-footer">
+            <span id="character-count" class="character-count">0 / 2000 字</span>
+            <button id="submit-button" type="submit">获取回答 <span aria-hidden="true">↗</span></button>
+          </div>
+        </form>
+      </section>
+
+      <section id="image-panel" class="question-card" aria-labelledby="image-title" hidden>
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">第二步 · 图片提问</p>
+            <h2 id="image-title">上传一张农牧业照片</h2>
+          </div>
+          <span class="step-pill">图片观察 + 神农建议</span>
+        </div>
+        <form id="image-form">
+          <label for="image-file" class="field-label">作物或牲畜照片（JPG / PNG，最多 4 MB）</label>
+          <input id="image-file" name="image-file" type="file" accept="image/jpeg,image/png" required>
+          <img id="image-preview" class="image-preview" alt="所选照片预览" hidden>
+          <label for="image-question" class="field-label image-question-label">想问什么？（可不填）</label>
+          <textarea id="image-question" name="image-question" rows="3" maxlength="500" placeholder="例如：这片叶子怎么了？不填也可以，请拍清楚需要观察的位置。"></textarea>
+          <div class="form-footer">
+            <span class="character-count">照片只能提供线索，病因仍需现场确认</span>
+            <button id="image-submit-button" type="submit">识别并提问 <span aria-hidden="true">↗</span></button>
+          </div>
+        </form>
+      </section>
+        </div>
+
+      </div>
+
+
+      <nav class="composer-tools" aria-label="提问方式和语言">
+        <div class="input-tabs">
+          <button type="button" class="input-tab selected" data-input="text" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>文字</button>
+          <button type="button" class="input-tab" data-input="voice" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5M8 22h8"/></svg>语音</button>
+          <button type="button" class="input-tab" data-input="image" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1"/><path d="m3 17 5-5 4 4 4-6 5 7"/></svg>图片</button>
+        </div>
+        <div class="language-switch" role="group" aria-label="输入语言">
+          <button type="button" data-language="zh" aria-pressed="true">中文</button><span aria-hidden="true">|</span><button type="button" data-language="ug" aria-pressed="false" lang="ug" dir="rtl">ئۇيغۇر تىلى</button>
+        </div>
+        <button id="stop-answer" type="button" class="stop-answer" hidden>停止</button>
+        <button id="composer-send" type="button" class="send-action">发送 <span aria-hidden="true">↑</span></button>
+      </nav>
+      </div>
+
+      <section id="transcription-card" class="answer-card" aria-labelledby="transcription-title" hidden>
+        <div class="section-head"><h2 id="transcription-title">维语识别与词库校正</h2></div>
+        <div class="transcription-version">
+          <p class="transcription-label">原始识别稿</p>
+          <div id="transcription-raw" class="answer-text" lang="ug" dir="rtl"></div>
+        </div>
+        <div class="transcription-version corrected-transcription">
+          <p class="transcription-label">农牧词库校正稿</p>
+          <div id="transcription" class="answer-text" lang="ug" dir="rtl"></div>
+        </div>
+        <p id="transcription-corrections" class="transcription-corrections" hidden></p>
+      </section>
+
+      <section id="observation-card" class="answer-card" aria-labelledby="observation-title" hidden>
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">图片初步观察</p>
+            <h2 id="observation-title">照片中看到了什么</h2>
+          </div>
+        </div>
+        <div id="observation" class="answer-text"></div>
+      </section>
+
+      <section id="answer-card" class="answer-card" aria-labelledby="answer-title" hidden>
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">神农回答</p>
+            <h2 id="answer-title">给你的建议</h2>
+          </div>
+        </div>
+        <div id="answer" class="answer-text"></div>
+      </section>
+
+      <section id="uyghur-answer-card" class="answer-card" aria-labelledby="uyghur-answer-title" hidden>
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">神农中文回答 · 腾讯维文翻译</p>
+            <h2 id="uyghur-answer-title">给你的建议</h2>
+          </div>
+        </div>
+        <div id="typed-uyghur-understanding" class="understood-question" hidden>
+          <strong>系统理解的中文问题</strong>
+          <p id="typed-uyghur-question-zh"></p>
+        </div>
+        <div class="bilingual-answer">
+          <article class="language-answer">
+            <div class="language-answer-head">
+              <h3>中文回答</h3>
+              <button id="speak-chinese" class="speak-button" type="button" aria-label="朗读中文回答" aria-pressed="false" title="朗读中文回答">🔊</button>
+            </div>
+            <div id="uyghur-answer-zh" class="answer-text" lang="zh-CN"></div>
+          </article>
+          <article class="language-answer uyghur-answer">
+            <div class="language-answer-head">
+              <h3>维吾尔语回答</h3>
+              <button id="speak-uyghur" class="speak-button" type="button" aria-label="朗读维吾尔语回答" aria-pressed="false" title="朗读维吾尔语回答">🔊</button>
+            </div>
+            <div id="uyghur-answer-ug" class="answer-text" lang="ug" dir="rtl"></div>
+          </article>
+        </div>
+      </section>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </main>
+
+    <footer>回答仅供参考。牲畜出现急症时，请及时联系当地兽医。</footer>
+  </div>
+</body>
+</html>

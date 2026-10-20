@@ -1,0 +1,405 @@
+{
+  "GlossaryId": "在腾讯控制台创建术语库后填写真实ID",
+  "Entries": [
+    {
+      "SourceTerm": "پالەك",
+      "TargetTerm": "菠菜"
+    },
+    {
+      "SourceTerm": "ۋوسۇڭ",
+      "TargetTerm": "生菜"
+    },
+    {
+      "SourceTerm": "كاۋا",
+      "TargetTerm": "南瓜"
+    },
+    {
+      "SourceTerm": "كاباچكى",
+      "TargetTerm": "西葫芦"
+    },
+    {
+      "SourceTerm": "قىشقوئوق",
+      "TargetTerm": "冬瓜"
+    },
+    {
+      "SourceTerm": "تاۋۇز",
+      "TargetTerm": "西瓜"
+    },
+    {
+      "SourceTerm": "قوغۇن",
+      "TargetTerm": "甜瓜"
+    },
+    {
+      "SourceTerm": "قوغۇن",
+      "TargetTerm": "哈密瓜"
+    },
+    {
+      "SourceTerm": "يېسى پۇرچاق",
+      "TargetTerm": "豆角"
+    },
+    {
+      "SourceTerm": "كۆك لازا",
+      "TargetTerm": "青椒"
+    },
+    {
+      "SourceTerm": "پارنىك كۆكتاتلىرى",
+      "TargetTerm": "大棚蔬菜"
+    },
+    {
+      "SourceTerm": "لۆكتات مايسىسى يېتىشتۇرۇش",
+      "TargetTerm": "育苗"
+    },
+    {
+      "SourceTerm": "مايسا تاختىسى",
+      "TargetTerm": "苗床"
+    },
+    {
+      "SourceTerm": "ئۇلاش",
+      "TargetTerm": "嫁接"
+    },
+    {
+      "SourceTerm": "ئاساسلىق غۇلى",
+      "TargetTerm": "砧木"
+    },
+    {
+      "SourceTerm": "ئۇلىما شېخى",
+      "TargetTerm": "接穗"
+    },
+    {
+      "SourceTerm": "باغ",
+      "TargetTerm": "果园"
+    },
+    {
+      "SourceTerm": "مېۋە دەرىخى",
+      "TargetTerm": "果树"
+    },
+    {
+      "SourceTerm": "ئالما",
+      "TargetTerm": "苹果"
+    },
+    {
+      "SourceTerm": "نەشپۈت",
+      "TargetTerm": "梨"
+    },
+    {
+      "SourceTerm": "ئۈزۈم",
+      "TargetTerm": "葡萄"
+    },
+    {
+      "SourceTerm": "ئۆرۈك",
+      "TargetTerm": "杏"
+    },
+    {
+      "SourceTerm": "شاپتۇل",
+      "TargetTerm": "桃"
+    },
+    {
+      "SourceTerm": "ئالۇچا",
+      "TargetTerm": "李子"
+    },
+    {
+      "SourceTerm": "گىلاس",
+      "TargetTerm": "樱桃"
+    },
+    {
+      "SourceTerm": "ئانار",
+      "TargetTerm": "石榴"
+    },
+    {
+      "SourceTerm": "ياڭاق",
+      "TargetTerm": "核桃"
+    },
+    {
+      "SourceTerm": "چىلان",
+      "TargetTerm": "红枣"
+    },
+    {
+      "SourceTerm": "ئۈجمە دەرىخى",
+      "TargetTerm": "枣树"
+    },
+    {
+      "SourceTerm": "بادام",
+      "TargetTerm": "巴旦木"
+    },
+    {
+      "SourceTerm": "ئەنجۈر",
+      "TargetTerm": "无花果"
+    },
+    {
+      "SourceTerm": "ئۈجمە",
+      "TargetTerm": "桑葚"
+    },
+    {
+      "SourceTerm": "كۆچەت",
+      "TargetTerm": "树苗"
+    },
+    {
+      "SourceTerm": "شاخ",
+      "TargetTerm": "枝条"
+    },
+    {
+      "SourceTerm": "ئاساسلىق شاخ",
+      "TargetTerm": "主枝"
+    },
+    {
+      "SourceTerm": "يان شاخ",
+      "TargetTerm": "侧枝"
+    },
+    {
+      "SourceTerm": "قىرقىماق",
+      "TargetTerm": "修剪"
+    },
+    {
+      "SourceTerm": "گۈلنى شالاڭلىتىش",
+      "TargetTerm": "疏花"
+    },
+    {
+      "SourceTerm": "مېۋىنى شالاڭلىتىش",
+      "TargetTerm": "疏果"
+    },
+    {
+      "SourceTerm": "مېۋە تۇتۇش",
+      "TargetTerm": "坐果"
+    },
+    {
+      "SourceTerm": "مېۋە تۆكۈلۈش",
+      "TargetTerm": "落果"
+    },
+    {
+      "SourceTerm": "مېۋە يېرىلىش",
+      "TargetTerm": "裂果"
+    },
+    {
+      "SourceTerm": "مېۋىگە خالتا كىيدۈرۈش",
+      "TargetTerm": "套袋"
+    },
+    {
+      "SourceTerm": "تەرمەك",
+      "TargetTerm": "采摘"
+    },
+    {
+      "SourceTerm": "يېڭى پىتى ساقلاش",
+      "TargetTerm": "保鲜"
+    },
+    {
+      "SourceTerm": "ئۆسۈملۈك كېسەللىكى",
+      "TargetTerm": "病害"
+    },
+    {
+      "SourceTerm": "ھاشارەت زىيىنى",
+      "TargetTerm": "虫害"
+    },
+    {
+      "SourceTerm": "كېسەللىك ۋە زىيانداش ھاشارات",
+      "TargetTerm": "病虫害"
+    },
+    {
+      "SourceTerm": "يوپۇرماق",
+      "TargetTerm": "叶片"
+    },
+    {
+      "SourceTerm": "يوپۇرماق ئۇچى",
+      "TargetTerm": "叶尖"
+    },
+    {
+      "SourceTerm": "يوپۇرماق تومۇرى",
+      "TargetTerm": "叶脉"
+    },
+    {
+      "SourceTerm": "يىلتىز سىستېمىسى",
+      "TargetTerm": "根系"
+    },
+    {
+      "SourceTerm": "ساپىقى",
+      "TargetTerm": "茎秆"
+    },
+    {
+      "SourceTerm": "سېرىق يوپۇرمىقى",
+      "TargetTerm": "黄叶"
+    },
+    {
+      "SourceTerm": "قاتلانغان يۇپۇرمىقى",
+      "TargetTerm": "卷叶"
+    },
+    {
+      "SourceTerm": "سۇلاش",
+      "TargetTerm": "萎蔫"
+    },
+    {
+      "SourceTerm": "سولماق",
+      "TargetTerm": "枯萎"
+    },
+    {
+      "SourceTerm": "داغ",
+      "TargetTerm": "斑点"
+    },
+    {
+      "SourceTerm": "كېسەل دېغى",
+      "TargetTerm": "病斑"
+    },
+    {
+      "SourceTerm": "ئاق كېسەللىك",
+      "TargetTerm": "白粉病"
+    },
+    {
+      "SourceTerm": "زەڭ كېسەللىكى",
+      "TargetTerm": "锈病"
+    },
+    {
+      "SourceTerm": "قىروق كېسەللىكى",
+      "TargetTerm": "霜霉病"
+    },
+    {
+      "SourceTerm": "سولاش كېسەللىكى",
+      "TargetTerm": "枯萎病"
+    },
+    {
+      "SourceTerm": "يىلتىز چىرىش كېسىلى",
+      "TargetTerm": "根腐病"
+    },
+    {
+      "SourceTerm": "غول چىرىش كېسىلى",
+      "TargetTerm": "茎腐病"
+    },
+    {
+      "SourceTerm": "كۈلرەڭ چىرىش كېسىلى",
+      "TargetTerm": "灰霉病"
+    },
+    {
+      "SourceTerm": "كۆمۈرچۈك كېسىلى",
+      "TargetTerm": "炭疽病"
+    },
+    {
+      "SourceTerm": "ۋىروسلۇق كېسەللىك",
+      "TargetTerm": "病毒病"
+    },
+    {
+      "SourceTerm": "باكتېرىيەلىك كېسىلى",
+      "TargetTerm": "细菌性病害"
+    },
+    {
+      "SourceTerm": "زەمبۇرۇغ كېسىلى",
+      "TargetTerm": "真菌病害"
+    },
+    {
+      "SourceTerm": "كۆك پىت",
+      "TargetTerm": "蚜虫"
+    },
+    {
+      "SourceTerm": "پاختا ئۇرچۇقى",
+      "TargetTerm": "棉蚜"
+    },
+    {
+      "SourceTerm": "قىزىل ئۆمۈچۈك",
+      "TargetTerm": "红蜘蛛"
+    },
+    {
+      "SourceTerm": "يوپۇرماق كېنىسى",
+      "TargetTerm": "叶螨"
+    },
+    {
+      "SourceTerm": "ئاق چىۋىن",
+      "TargetTerm": "白粉虱"
+    },
+    {
+      "SourceTerm": "تېرىپس",
+      "TargetTerm": "蓟马"
+    },
+    {
+      "SourceTerm": "تۇپراق قۇرتى",
+      "TargetTerm": "地老虎"
+    },
+    {
+      "SourceTerm": "قوناق پەرۋانىسى",
+      "TargetTerm": "玉米螟"
+    },
+    {
+      "SourceTerm": "پاختا پەرۋانىسى",
+      "TargetTerm": "棉铃虫"
+    },
+    {
+      "SourceTerm": "يوپۇرماق داغى",
+      "TargetTerm": "叶斑"
+    },
+    {
+      "SourceTerm": "ھاشارات تۇخۇمى",
+      "TargetTerm": "虫卵"
+    },
+    {
+      "SourceTerm": "قۇرت",
+      "TargetTerm": "幼虫"
+    },
+    {
+      "SourceTerm": "يېتىلگەن قورت",
+      "TargetTerm": "成虫"
+    },
+    {
+      "SourceTerm": "تارقىماق",
+      "TargetTerm": "传播"
+    },
+    {
+      "SourceTerm": "كېسەللىك قوزغىلىش",
+      "TargetTerm": "发病"
+    },
+    {
+      "SourceTerm": "دورا زىيىنى",
+      "TargetTerm": "药害"
+    },
+    {
+      "SourceTerm": "سوغۇق زىيىنى",
+      "TargetTerm": "冻害"
+    },
+    {
+      "SourceTerm": "كۇياش كۆيدۈرۈشى",
+      "TargetTerm": "日灼"
+    },
+    {
+      "SourceTerm": "ئوزۇقلۇق ئېلېمېنتى كەمچىل بولۇشى",
+      "TargetTerm": "缺素"
+    },
+    {
+      "SourceTerm": "ئازوت كەمچىل بولۇشى",
+      "TargetTerm": "缺氮"
+    },
+    {
+      "SourceTerm": "فوسفور كەمچىل بولۇشى",
+      "TargetTerm": "缺磷"
+    },
+    {
+      "SourceTerm": "كالىي كەمچىل بولۇشى",
+      "TargetTerm": "缺钾"
+    },
+    {
+      "SourceTerm": "ئوغۇتى",
+      "TargetTerm": "肥料"
+    },
+    {
+      "SourceTerm": "چىلە",
+      "TargetTerm": "农家肥"
+    },
+    {
+      "SourceTerm": "ئورگانىك ئوغۇتى",
+      "TargetTerm": "有机肥"
+    },
+    {
+      "SourceTerm": "خىمىيەلىك ئوغۇتى",
+      "TargetTerm": "化肥"
+    },
+    {
+      "SourceTerm": "ئازوت ئوغۇتى",
+      "TargetTerm": "氮肥"
+    },
+    {
+      "SourceTerm": "فوسفور ئوغۇتى",
+      "TargetTerm": "磷肥"
+    },
+    {
+      "SourceTerm": "كالىي ئوغۇتى",
+      "TargetTerm": "钾肥"
+    },
+    {
+      "SourceTerm": "بىرىكمە ئوغۇتى",
+      "TargetTerm": "复合肥"
+    }
+  ]
+}

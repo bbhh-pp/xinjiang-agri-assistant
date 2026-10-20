@@ -1,0 +1,13 @@
+{$DOMAIN} {
+	encode zstd gzip
+	header {
+		X-Content-Type-Options nosniff
+		X-Frame-Options DENY
+		Referrer-Policy strict-origin-when-cross-origin
+		Permissions-Policy "microphone=(self)"
+	}
+	reverse_proxy app:8000 {
+		flush_interval -1
+		stream_timeout 15m
+	}
+}

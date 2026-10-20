@@ -1,0 +1,405 @@
+{
+  "GlossaryId": "在腾讯控制台创建术语库后填写真实ID",
+  "Entries": [
+    {
+      "SourceTerm": "尿素",
+      "TargetTerm": "كاربامىد"
+    },
+    {
+      "SourceTerm": "追肥",
+      "TargetTerm": "قوشۇمچە ئوغۇتلاش"
+    },
+    {
+      "SourceTerm": "底肥",
+      "TargetTerm": "ئاساسىي ئوغۇت"
+    },
+    {
+      "SourceTerm": "叶面肥",
+      "TargetTerm": "يوپۇرماق ئوغۇتى"
+    },
+    {
+      "SourceTerm": "农药",
+      "TargetTerm": "دېھقانچىلىق دورىسى"
+    },
+    {
+      "SourceTerm": "杀虫剂",
+      "TargetTerm": "ھاشارات يوقىتىش دورىسى"
+    },
+    {
+      "SourceTerm": "杀菌剂",
+      "TargetTerm": "زەمبۇرۇغ يوقىتىش دورىسى"
+    },
+    {
+      "SourceTerm": "除草剂",
+      "TargetTerm": "ئوت يوقىتىش دورىسى"
+    },
+    {
+      "SourceTerm": "拌种剂",
+      "TargetTerm": "ئۇرۇق دورىسى"
+    },
+    {
+      "SourceTerm": "药液",
+      "TargetTerm": "دورا ئېرىتمىسى"
+    },
+    {
+      "SourceTerm": "浓度",
+      "TargetTerm": "قويۇقلۇق"
+    },
+    {
+      "SourceTerm": "稀释",
+      "TargetTerm": "سۇيۇلدۇرۇش"
+    },
+    {
+      "SourceTerm": "喷药",
+      "TargetTerm": "دورا چېچىش"
+    },
+    {
+      "SourceTerm": "喷雾器",
+      "TargetTerm": "پۈركۈگۈچ"
+    },
+    {
+      "SourceTerm": "安全间隔期",
+      "TargetTerm": "بىخەتەرلىك ئارىلىق مۇددىتى"
+    },
+    {
+      "SourceTerm": "残留",
+      "TargetTerm": "قالدۇق"
+    },
+    {
+      "SourceTerm": "防护服",
+      "TargetTerm": "قوغداش كىيىمى"
+    },
+    {
+      "SourceTerm": "口罩",
+      "TargetTerm": "ماسكا"
+    },
+    {
+      "SourceTerm": "标签",
+      "TargetTerm": "بەلگە"
+    },
+    {
+      "SourceTerm": "有效成分",
+      "TargetTerm": "ئۈنۈملۈك تەركىبى"
+    },
+    {
+      "SourceTerm": "施药量",
+      "TargetTerm": "دورا ئىشلىتىش مىقدارى"
+    },
+    {
+      "SourceTerm": "混配",
+      "TargetTerm": "ئارىلاشتۇرۇپ ئىشلىتىش"
+    },
+    {
+      "SourceTerm": "拖拉机",
+      "TargetTerm": "تراكتور"
+    },
+    {
+      "SourceTerm": "播种机",
+      "TargetTerm": "تېرىش ماشىنىسى"
+    },
+    {
+      "SourceTerm": "收割机",
+      "TargetTerm": "ئورۇش ماشىنىسى"
+    },
+    {
+      "SourceTerm": "联合收割机",
+      "TargetTerm": "بىرلەشمە ئورۇش ماشىنىسى"
+    },
+    {
+      "SourceTerm": "旋耕机",
+      "TargetTerm": "تۇپراق يۇمشىتىش ماشىنىسى"
+    },
+    {
+      "SourceTerm": "耕地",
+      "TargetTerm": "يەر ھەيدەش"
+    },
+    {
+      "SourceTerm": "深翻",
+      "TargetTerm": "چوڭقۇر ھەيدەش"
+    },
+    {
+      "SourceTerm": "耙地",
+      "TargetTerm": "يەر تىرنىلىماق"
+    },
+    {
+      "SourceTerm": "施肥",
+      "TargetTerm": "ئوغۇتلاش"
+    },
+    {
+      "SourceTerm": "中耕",
+      "TargetTerm": "قۇر ئارىسىنى يۇمشىتىش"
+    },
+    {
+      "SourceTerm": "培土",
+      "TargetTerm": "تۇپراق دۆۋىلەش"
+    },
+    {
+      "SourceTerm": "覆土",
+      "TargetTerm": "تۇپراق بىلەن كۆمۈش"
+    },
+    {
+      "SourceTerm": "行距",
+      "TargetTerm": "قۇر ئارىلىقى"
+    },
+    {
+      "SourceTerm": "株距",
+      "TargetTerm": "تۈپ ئارىلىقى"
+    },
+    {
+      "SourceTerm": "播种深度",
+      "TargetTerm": "تېرىش چوڭقۇرلۇقى"
+    },
+    {
+      "SourceTerm": "亩",
+      "TargetTerm": "مو"
+    },
+    {
+      "SourceTerm": "公顷",
+      "TargetTerm": "گېكتار"
+    },
+    {
+      "SourceTerm": "亩产",
+      "TargetTerm": "مو بېشى ھوسۇلى"
+    },
+    {
+      "SourceTerm": "公斤",
+      "TargetTerm": "كىلو"
+    },
+    {
+      "SourceTerm": "喷灌",
+      "TargetTerm": "پۈركۈپ سۇغىرىش"
+    },
+    {
+      "SourceTerm": "畜牧业",
+      "TargetTerm": "چارۋىچىلىق"
+    },
+    {
+      "SourceTerm": "农牧业",
+      "TargetTerm": "دېھقانچىلىق ۋە چارۋىچىلىق"
+    },
+    {
+      "SourceTerm": "牲畜",
+      "TargetTerm": "چارۋا"
+    },
+    {
+      "SourceTerm": "家畜",
+      "TargetTerm": "ئۆي ھايۋانلىرى"
+    },
+    {
+      "SourceTerm": "羊",
+      "TargetTerm": "قوي"
+    },
+    {
+      "SourceTerm": "绵羊",
+      "TargetTerm": "قوي"
+    },
+    {
+      "SourceTerm": "山羊",
+      "TargetTerm": "ئۆچكە"
+    },
+    {
+      "SourceTerm": "牛",
+      "TargetTerm": "كالا"
+    },
+    {
+      "SourceTerm": "奶牛",
+      "TargetTerm": "سۈت كالىسى"
+    },
+    {
+      "SourceTerm": "马",
+      "TargetTerm": "ئات"
+    },
+    {
+      "SourceTerm": "驴",
+      "TargetTerm": "ئېشەك"
+    },
+    {
+      "SourceTerm": "骡子",
+      "TargetTerm": "خېچىر"
+    },
+    {
+      "SourceTerm": "骆驼",
+      "TargetTerm": "تۆگە"
+    },
+    {
+      "SourceTerm": "猪",
+      "TargetTerm": "چوشقا"
+    },
+    {
+      "SourceTerm": "鸡",
+      "TargetTerm": "توخۇ"
+    },
+    {
+      "SourceTerm": "鸭",
+      "TargetTerm": "ئۆردەك"
+    },
+    {
+      "SourceTerm": "鹅",
+      "TargetTerm": "غاز"
+    },
+    {
+      "SourceTerm": "兔",
+      "TargetTerm": "توشقان"
+    },
+    {
+      "SourceTerm": "狗",
+      "TargetTerm": "ئىت"
+    },
+    {
+      "SourceTerm": "牧羊犬",
+      "TargetTerm": "پادا ئىتى"
+    },
+    {
+      "SourceTerm": "公羊",
+      "TargetTerm": "قوچقار"
+    },
+    {
+      "SourceTerm": "母羊",
+      "TargetTerm": "ساغلىق"
+    },
+    {
+      "SourceTerm": "羔羊",
+      "TargetTerm": "قوزا"
+    },
+    {
+      "SourceTerm": "羊羔",
+      "TargetTerm": "قوزا"
+    },
+    {
+      "SourceTerm": "羊犊",
+      "TargetTerm": "قوزا"
+    },
+    {
+      "SourceTerm": "牛犊",
+      "TargetTerm": "موزاي"
+    },
+    {
+      "SourceTerm": "犊牛",
+      "TargetTerm": "موزاي"
+    },
+    {
+      "SourceTerm": "马驹",
+      "TargetTerm": "قۇلۇن"
+    },
+    {
+      "SourceTerm": "母畜",
+      "TargetTerm": "چىشى چارۋا"
+    },
+    {
+      "SourceTerm": "公畜",
+      "TargetTerm": "ئەر چارۋا"
+    },
+    {
+      "SourceTerm": "妊娠",
+      "TargetTerm": "ھامىلىدار بولۇش"
+    },
+    {
+      "SourceTerm": "怀孕",
+      "TargetTerm": "ھامىلىدار"
+    },
+    {
+      "SourceTerm": "配种",
+      "TargetTerm": "ئۇرۇقلاندۇرۇش"
+    },
+    {
+      "SourceTerm": "人工授精",
+      "TargetTerm": "سۈنئىي ئۇرۇقلاندۇرۇش"
+    },
+    {
+      "SourceTerm": "发情",
+      "TargetTerm": "كۈيگە كېلىش"
+    },
+    {
+      "SourceTerm": "产仔",
+      "TargetTerm": "تۇغۇش"
+    },
+    {
+      "SourceTerm": "产羔",
+      "TargetTerm": "قوزىلاش"
+    },
+    {
+      "SourceTerm": "流产",
+      "TargetTerm": "بالا چۈشۈرۈش"
+    },
+    {
+      "SourceTerm": "难产",
+      "TargetTerm": "تۇغۇت قىيىنلىشىش"
+    },
+    {
+      "SourceTerm": "去势",
+      "TargetTerm": "ئاختا قىلماق"
+    },
+    {
+      "SourceTerm": "断奶",
+      "TargetTerm": "ئېمىتىشتىن توختىتىش"
+    },
+    {
+      "SourceTerm": "剪毛",
+      "TargetTerm": "يۇڭ قىرقىش"
+    },
+    {
+      "SourceTerm": "挤奶",
+      "TargetTerm": "سۈت سېغىش"
+    },
+    {
+      "SourceTerm": "放牧",
+      "TargetTerm": "ئوتلىتىش"
+    },
+    {
+      "SourceTerm": "羊群",
+      "TargetTerm": "قويلار"
+    },
+    {
+      "SourceTerm": "牛群",
+      "TargetTerm": "كالىلار"
+    },
+    {
+      "SourceTerm": "牧场",
+      "TargetTerm": "ئوتلاق"
+    },
+    {
+      "SourceTerm": "圈舍",
+      "TargetTerm": "قوتان"
+    },
+    {
+      "SourceTerm": "羊圈",
+      "TargetTerm": "قوي قوتىنى"
+    },
+    {
+      "SourceTerm": "牛棚",
+      "TargetTerm": "كالا قوتىنى"
+    },
+    {
+      "SourceTerm": "栏舍",
+      "TargetTerm": "قوتان"
+    },
+    {
+      "SourceTerm": "密度",
+      "TargetTerm": "زىچلىقى"
+    },
+    {
+      "SourceTerm": "品种改良",
+      "TargetTerm": "نەسىل ياخشىلاش"
+    },
+    {
+      "SourceTerm": "良种",
+      "TargetTerm": "ياخشى نەسىل"
+    },
+    {
+      "SourceTerm": "耳标",
+      "TargetTerm": "قۇلاق بەلگىسى"
+    },
+    {
+      "SourceTerm": "存栏",
+      "TargetTerm": "بېقىلىۋاتقان چارۋا سانى"
+    },
+    {
+      "SourceTerm": "出栏",
+      "TargetTerm": "بازارغا چىقىرىش"
+    },
+    {
+      "SourceTerm": "饲料",
+      "TargetTerm": "يەم"
+    }
+  ]
+}
